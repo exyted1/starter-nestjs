@@ -1,0 +1,457 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital@0;1&family=Oswald:wght@200;300;400;500&display=swap');
+
+
+@font-face{font-family:industry;src:url(https://use.typekit.net/af/44c438/00000000000000007735a64e/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3) format("woff2"),url(https://use.typekit.net/af/44c438/00000000000000007735a64e/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3) format("woff"),url(https://use.typekit.net/af/44c438/00000000000000007735a64e/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3) format("opentype");font-weight:700;font-style:normal;font-stretch:normal;font-display:auto;}
+@font-face{font-family:industry;src:url(https://use.typekit.net/af/94f9bd/00000000000000007735a64f/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3) format("woff2"),url(https://use.typekit.net/af/94f9bd/00000000000000007735a64f/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3) format("woff"),url(https://use.typekit.net/af/94f9bd/00000000000000007735a64f/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3) format("opentype");font-weight:700;font-style:italic;font-stretch:normal;font-display:auto;}
+@font-face{font-family:industry;src:url(https://use.typekit.net/af/44c438/00000000000000007735a64e/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3) format("woff2"),url(https://use.typekit.net/af/44c438/00000000000000007735a64e/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3) format("woff"),url(https://use.typekit.net/af/44c438/00000000000000007735a64e/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3) format("opentype");font-weight:500;font-style:normal;font-stretch:normal;font-display:auto;}
+@font-face{font-family:industry;src:url(https://use.typekit.net/af/94f9bd/00000000000000007735a64f/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3) format("woff2"),url(https://use.typekit.net/af/94f9bd/00000000000000007735a64f/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3) format("woff"),url(https://use.typekit.net/af/94f9bd/00000000000000007735a64f/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3) format("opentype");font-weight:500;font-style:italic;font-stretch:normal;font-display:auto;}
+@font-face{font-family:industry;src:url(https://use.typekit.net/af/08fe52/00000000000000007735a650/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("woff2"),url(https://use.typekit.net/af/08fe52/00000000000000007735a650/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("woff"),url(https://use.typekit.net/af/08fe52/00000000000000007735a650/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("opentype");font-weight:400;font-style:normal;font-stretch:normal;font-display:auto;}
+@font-face{font-family:industry;src:url(https://use.typekit.net/af/79952e/00000000000000007735a651/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3) format("woff2"),url(https://use.typekit.net/af/79952e/00000000000000007735a651/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3) format("woff"),url(https://use.typekit.net/af/79952e/00000000000000007735a651/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3) format("opentype");font-weight:400;font-style:italic;font-stretch:normal;font-display:auto;}
+@font-face {
+  font-family: GTA;
+  src: url(../public/GTA.otf) format("opentype");
+}
+@font-face {
+  font-family: SUP;
+  src: url(../public/SUP.ttf) format("opentype");
+}
+body {
+  font-family: 'Inter';
+  @apply bg-gray-900;
+  color: #fff;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.mvl {
+  min-width: 72vw;
+  margin: 0 auto;
+}
+.mvj {
+  min-width: 10vw;
+  margin: 0 auto;
+  text-align: center;
+}
+.mvn {
+  margin: 0 auto;
+  text-align: center;
+}
+.mnm {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+.mvp {
+  min-width: 50vw;
+  margin: 0 auto;
+  background-color: #1a1f25cf;
+}
+
+/* Slideshow */
+
+.slideshow {
+  margin: 0 auto;
+  overflow: hidden;
+  width: 72vw;
+}
+
+.slide {
+  display: inline-block;
+  margin: 0 auto;
+  height: 220px;
+  width: 72vw;
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+}
+
+.slideshowSlider {
+  white-space: nowrap;
+  transition: ease 1000ms;
+}
+
+.focus {
+  margin-right: 200px;
+  margin-bottom: 250px;
+}
+.focus2 {
+  margin-bottom: 10px;
+}
+.slake {
+  width: 80%;
+  margin: auto;
+}
+.imagine {
+  font-size: 17px;
+  font-weight: 600;
+  text-align: center;
+}
+.imagine2 {
+  font-size: 17px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.imagine3 {
+  font-size: 17px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100vh;
+  gap: 0.25rem; 
+  margin-top: 8px;
+  border-radius: 0.75rem; 
+  padding: 0.75rem 1.75rem; 
+}
+.text-1 {
+  font-size: 0.85rem/* 12px */;
+  line-height: 1rem/* 16px */;
+}
+
+.flex-item {
+  display: flex;
+  flex-grow: 2; 
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.img-container {
+  max-height: 200px; /* max-h-[400px] */
+  width: auto; /* w-auto */
+  border-radius: 0.75rem; /* rounded-xl */
+}
+.img-container2 {
+  max-height: 120px; /* max-h-[400px] */
+  width: auto; /* w-auto */
+  border-radius: 0.75rem; /* rounded-xl */
+}
+
+.mbx {
+  margin-bottom: -0.5rem; /* mb-6 */
+}
+
+.flex-col-gap-6 {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* gap-6 */
+}
+
+.smile {
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.token-wrapper {
+  position: relative;
+  display: flex;
+  cursor: pointer;
+  width: 27vh;
+  flex-direction: column;
+  border-radius: 2rem;
+  border-width: 4px;
+}
+
+.token-wrapper.selected {
+  border-color: var(--secondary-color);
+  box-shadow: 0px 0px 20px var(--secondary-color, #FFFFFF);
+}
+
+.token-wrapper:not(.selected) {
+  border-color: var(--primary-color);
+  box-shadow: 0px 0px 20px var(--primary-color, #FFFFFF);
+}
+
+.token-wrapper-container {
+  display: flex;
+  grid-template-columns: 1fr;
+  margin-right: 110px; /* gap-1 */
+}
+
+.flex-col-rounded-xl-p-10 {
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.75rem; /* Sesuaikan dengan kebutuhan */
+  padding: 2.5rem; /* Sesuaikan dengan kebutuhan */
+}
+
+.token-list-wrapper {
+  position: relative;
+  margin-top: auto;
+  margin-bottom: 1rem;
+  height: 51vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border-radius: 0.375rem; /* Sesuaikan dengan kebutuhan */
+  background-color: rgba(100, 230, 250, 0.1); /* Sesuaikan dengan kebutuhan */
+  padding: 1.25rem; /* Sesuaikan dengan kebutuhan */
+}
+.token-list-wrapper2 {
+  position: relative;
+  margin-top: auto;
+  margin-bottom: 1rem;
+  height: 58vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border-radius: 0.375rem; /* Sesuaikan dengan kebutuhan */
+  background-color: rgba(100, 230, 250, 0.1); /* Sesuaikan dengan kebutuhan */
+  padding: 1.25rem; /* Sesuaikan dengan kebutuhan */
+}
+.aspect-square1 {
+  position: relative;
+  width: 100%;
+  padding-top: 100%; /* Untuk membuatnya berbentuk persegi (1:1 aspect ratio) */
+  animation: pulse 3s infinite;
+  border-radius: 1rem; /* Atau sesuaikan dengan kebutuhan */
+  background-color: #fff; /* Warna latar belakang putih */
+  height: 300px;
+  background-color: rgba(255, 255, 255, 0.5); /* Opasitas latar belakang 0.5 */
+  padding: 2.5rem; /* Atau sesuaikan dengan kebutuhan */
+}
+.aspect-square2 {
+  position: relative;
+  width: 100%;
+  padding-top: 100%; /* Untuk membuatnya berbentuk persegi (1:1 aspect ratio) */
+  animation: pulse 3s infinite;
+  border-radius: 1rem; /* Atau sesuaikan dengan kebutuhan */
+  background-color: #fff; /* Warna latar belakang putih */
+  background-color: rgba(255, 255, 255, 0.5); /* Opasitas latar belakang 0.5 */
+  padding: 2.5rem; /* Atau sesuaikan dengan kebutuhan */
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.absolute-content {
+  position: absolute; /* Mengatur posisi absolut */
+  background-color: #1a1f25;
+  width: 100%; /* Mengatur lebar menjadi 100% dari parent */
+  border-top-left-radius: 0.75rem; /* Mengatur sudut bulat pada sudut atas kiri */
+  border-top-right-radius: 0.75rem; /* Mengatur sudut bulat pada sudut atas kanan */
+  object-fit: contain; /* Objek akan terkonten dalam kotak tanpa mempertahankan aspek orisinal */
+  display: flex;
+  animation: pulse 3s infinite;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.absolute-content2 {
+  position: absolute; /* Mengatur posisi absolut */
+  width: 100%; /* Mengatur lebar menjadi 100% dari parent */
+  border-top-left-radius: 0.75rem; /* Mengatur sudut bulat pada sudut atas kiri */
+  border-top-right-radius: 0.75rem; /* Mengatur sudut bulat pada sudut atas kanan */
+  object-fit: contain; /* Objek akan terkonten dalam kotak tanpa mempertahankan aspek orisinal */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  position: absolute;
+  top: 90%;
+  left: 0;
+  right: 0;
+  bottom: -2rem;
+  background-image: linear-gradient(to bottom, transparent, #1a1f25, #4b5563); /* Mengatur gradasi warna */
+}
+.color-medium-4 {
+  --tw-text-opacity: 1;
+  color: rgb(#4706e2 / var(--tw-text-opacity));
+}
+
+.color-medium-5 {
+  background-color: #4706e2 ;
+}
+
+.frontm {
+  margin-bottom: 10px;
+}
+.text-custome {
+  font-size: 1.1rem;
+  line-height: 1.6rem;
+}
+.flux {
+  margin-bottom: 8px;
+  margin-right: 10px;
+  margin-left: -4px;
+}
+
+.aloha {
+  justify-content: space-between;
+}
+
+@media (min-width: 1280px) {
+  .token-wrapper-container {
+    grid-template-columns: repeat(2, 1fr); /* xl:grid-cols-2 */
+  }
+}
+
+@media (max-width: 768px) {
+  html, body {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  .aloha {
+    justify-content: center;
+  }
+  .flux {
+    margin-bottom: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+  .token-wrapper-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-right: 110px; /* gap-1 */
+  }
+  .slake {
+    width: 120%;
+    margin-left: -10%;
+  }
+  .img-container {
+    max-height: 150px; /* max-h-[400px] */
+    width: auto; /* w-auto */
+    border-radius: 0.75rem; /* rounded-xl */
+  }
+  .img-container2 {
+    max-height: 100px; /* max-h-[400px] */
+    width: auto; /* w-auto */
+    border-radius: 0.75rem; /* rounded-xl */
+  }
+  .text-custome {
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+  }
+  .mnm {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .mvl {
+    max-width: 80vw;
+  }
+  .mvp {
+    min-width: 80vw;
+  }
+  .flex-col-gap-6 {
+    gap: 0rem; /* gap-6 */
+  }
+  .aspal {
+    margin-top: 10px;
+  }
+  .frontm {
+    margin-right: 10px;
+  }
+  .w-full2{
+    width: 100px;
+  }
+  .slideshow {
+    margin-left: -25px; /* Adjust if needed */
+    width: 360px;
+    overflow: hidden; /* Ensures the slides don't overflow */
+  }
+  
+  .slide {
+    overflow: hidden; /* Ensures the slides don't overflow */
+    height: 120px;
+    width: 360px;
+    border-radius: 20px; /* Rounded corners */
+  }
+
+  .asoel {
+    margin-left: -50px;
+  }
+  
+  .connect{
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  .imagine {
+    font-size: 12px;
+    width: 120%;
+    text-align: center;
+  }
+  .imagine2 {
+    font-size: 12px;
+    text-align: center;
+  }
+  .flex-container {
+    flex-direction: row;
+  }
+  .flex-col-rounded-xl-p-10 {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.75rem; /* Sesuaikan dengan kebutuhan */
+    padding: 2rem; /* Sesuaikan dengan kebutuhan */
+  }
+  .aspect-square1 {
+    position: relative;
+    width: 200px;
+    height: 350px;
+    padding-top: 79.5%; /* Untuk membuatnya berbentuk persegi (1:1 aspect ratio) */
+    animation: pulse 3s infinite;
+    border-radius: 1rem; /* Atau sesuaikan dengan kebutuhan */
+    background-color: rgba(255, 255, 255, 0.5); /* Opasitas latar belakang 0.5 */
+  }
+  .aspect-square2 {
+    position: relative;
+    width: 100%;
+    padding-top: 100%; /* Untuk membuatnya berbentuk persegi (1:1 aspect ratio) */
+    animation: pulse 3s infinite;
+    border-radius: 1rem; /* Atau sesuaikan dengan kebutuhan */
+    background-color: rgba(255, 255, 255, 0.5); /* Opasitas latar belakang 0.5 */
+  }
+  .token-list-wrapper {
+    position: relative;
+    margin-top: auto;
+    margin-bottom: 1rem;
+    height: 51vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border-radius: 0.375rem; /* Sesuaikan dengan kebutuhan */
+    background-color: rgba(100, 230, 250, 0.1); /* Sesuaikan dengan kebutuhan */
+    padding: 1.25rem; /* Sesuaikan dengan kebutuhan */
+  }
+  .token-list-wrapper2 {
+    position: relative;
+    margin-top: auto;
+    margin-bottom: 1rem;
+    height: 58vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border-radius: 0.375rem; /* Sesuaikan dengan kebutuhan */
+    background-color: rgba(100, 230, 250, 0.1); /* Sesuaikan dengan kebutuhan */
+    padding: 1.25rem; /* Sesuaikan dengan kebutuhan */
+  }
+}
+
+/* Custom CSS for smaller screens like mobile phones */
+/* Custom CSS for smaller screens like mobile phones */
+@media only screen and (max-width: 600px) {
+  .custom-button-container {
+    margin-right: 35px; 
+  }
+  .custom-button-unstake {
+    margin-right: 5px; 
+  }
+}
+
+
+
+
+::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}

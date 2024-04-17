@@ -1,0 +1,11 @@
+/* Custom CSS for smaller screens like mobile phones */
+@media only screen and (max-width: 768px) {
+    .custom-class-for-spinner {
+      margin-right: 20px; /* Menggeser ke kiri sebanyak 20px */
+    }
+  
+    .custom-class-for-claim-rewards {
+      margin-left: 20px; /* Menggeser ke kanan sebanyak 20px */
+    }
+  }
+  
