@@ -1,9 +1,9 @@
 import { contrastify } from '@cardinal/common'
 import { darken, lighten } from 'polished'
-import { FaDiscord, FaGithub, FaGlobe, FaMedium, FaTwitter } from 'react-icons/fa'
+import {  FaGithub, FaGlobe, FaMedium, FaTelegram, FaTwitter } from 'react-icons/fa'
 
 export const SOCIALS = {
-  discord: { icon: <FaDiscord />, link: 'https://discord.gg/byq6uNTugq' },
+  discord: { icon: <FaTelegram />, link: 'https://discord.gg/byq6uNTugq' },
   github: { icon: <FaGithub />, link: 'https://github.com/cardinal-labs' },
   medium: { icon: <FaMedium />, link: 'https://cardinal-labs.medium.com/' },
   twitter: { icon: <FaTwitter />, link: 'https://twitter.com/cardinal_labs' },
@@ -43,11 +43,11 @@ export const Footer = ({
             <a href="https://minkspace.com" className="text-gray-400">
               Home
             </a>
-            <a href="https://comingsoon.minkspace.com" className="text-gray-400">
+            <a href="https://mint.minkspace.com" className="text-gray-400">
               Minting
             </a>
             <a href="https://paper.minkspace.com" className="text-gray-400">
-              Ltepaper
+              Litepaper
             </a>
             {/* <a href="mailto:team@cardinal.so" className="text-gray-400">
               Contact
@@ -88,7 +88,7 @@ export const Footer = ({
         </div>
         <div className="flex gap-4 text-gray-200">
         <a
-            href="https://discord.gg/QQDSUnQefC"
+            href="https://minkspace.com/"
             target="_blank"
             rel="noreferrer"
             className={`transition-colors hover:text-primary`}
@@ -96,15 +96,15 @@ export const Footer = ({
             <FaGlobe />
           </a>
           <a
-            href="https://discord.gg/QQDSUnQefC"
+            href="https://t.me/minkspace_com"
             target="_blank"
             rel="noreferrer"
             className={`transition-colors hover:text-primary`}
           >
-            <FaDiscord />
+            <FaTelegram  />
           </a>
           <a
-            href="https://discord.gg/QQDSUnQefC"
+            href="https://twitter.com/minkspace_com"
             target="_blank"
             rel="noreferrer"
             className={`transition-colors hover:text-primary`}

@@ -72,7 +72,7 @@ export const Header = () => {
             <a href="https://minkspace.com" className="cursor-pointer">
               Home
             </a>
-            <a href="https://comingsoon.minkspace.com/" className="cursor-pointer">
+            <a href="https://mint.minkspace.com/" className="cursor-pointer">
               Minting
             </a>
             <a href="https://paper.minkspace.com" className="cursor-pointer">
@@ -153,7 +153,7 @@ export const Header = () => {
                     </a>
                   </li>
                   <li className="focus2">
-                    <a href="https://comingsoon.minkspace.com/">
+                    <a href="https://mint.minkspace.com/">
                       Mnting
                     </a>
                   </li>
