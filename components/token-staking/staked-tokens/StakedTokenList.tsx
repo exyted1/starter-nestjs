@@ -10,7 +10,7 @@ import { DEFAULT_PAGE, PAGE_SIZE } from '@/components/token-staking/constants'
 import { StakedToken } from '@/components/token-staking/staked-tokens/StakedToken'
 import { TokenListEmptyState } from '@/components/token-staking/token-list/TokenListEmptyState'
 import { TokenListLoader } from '@/components/token-staking/token-list/TokenListLoader'
-import { TokenListWrapper2 } from '@/components/token-staking/token-list/TokenListWrapper2'
+import { TokenListWrapper } from '@/components/token-staking/token-list/TokenListWrapper'
 
 export type StakedTokenListProps = {
   stakedSelected: StakeEntryTokenData[]
@@ -63,7 +63,7 @@ export const StakedTokenList = ({
     }
   }
   return (
-    <TokenListWrapper2 setPageNum={setPageNum}>
+    <TokenListWrapper setPageNum={setPageNum}>
       {!stakedTokenDatas.isFetched ? (
         <TokenListLoader />
       ) : stakedTokenDatas.data?.length === 0 ? (
@@ -72,7 +72,7 @@ export const StakedTokenList = ({
           message="Nft not Detected."
         />
       ) : (
-        <div className="token-wrapper-container">
+        <div className="grid grid-cols-1 gap-4 xl:grid-cols-3">
           {!stakePoolMetadata?.notFound &&
             stakedTokenDatas.data &&
             stakedTokenDatas.data
@@ -94,6 +94,6 @@ export const StakedTokenList = ({
               ))}
         </div>
       )}
-    </TokenListWrapper2>
+    </TokenListWrapper>
   )
 }

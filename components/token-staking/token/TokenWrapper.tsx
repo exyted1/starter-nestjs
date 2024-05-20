@@ -20,7 +20,7 @@ export const TokenWrapper = ({
   return (
     <div
       className={classNames([
-        'relative flex cursor-pointer w-[27vh] flex-col rounded-2xl border-4 aspal flux',
+        'relative flex cursor-pointer w-[26vh] flex-col rounded-2xl border-4 aspal flux',
         {
           'border-violet-500 shadow-lg':
             selected && !stakePoolMetadata?.colors?.secondary,

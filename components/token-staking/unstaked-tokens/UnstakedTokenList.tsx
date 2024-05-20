@@ -100,7 +100,7 @@ export const UnstakedTokenList = ({
           message="Nft not Detected."
         />
       ) : (
-        <div className={'token-wrapper-container'}>
+        <div className={'grid grid-cols-1 gap-4 xl:grid-cols-3'}>
           {(stakePoolMetadata?.notFound
             ? []
             : allowedTokenDatas.data?.slice(0, PAGE_SIZE * pageNum[0]) ?? []
